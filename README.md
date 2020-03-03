@@ -27,3 +27,6 @@ enter package URL : https://github.com/kerollesroshdi/KRTabBar.git , choose the 
 
 #### set UITabBarItem Color and image
 <img src="images/baritem2.png" width="600">
+
+## Licence
+KRTabBar is released under an MIT license. See [License](https://github.com/kerollesroshdi/KRTabBar/blob/master/LICENSE) for more information.
