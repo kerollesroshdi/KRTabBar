@@ -5,7 +5,7 @@
 
 This package provides a beautiful easy to use UITabBarController
 
-<img src="images/KRTabBarGIF.gif" width="300"> 
+<img src="images/KRTabBarGIF.gif" width="300"> <img src="images/KRTabBarGIF2.gif" width="300"> 
 
 <img src="images/KRTabBar-01.png" width="200"> <img src="images/KRTabBar-02.png" width="200"> <img src="images/KRTabBar-03.png" width="200"> <img src="images/KRTabBar-04.png" width="200">
 
