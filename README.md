@@ -19,3 +19,11 @@ File -> Swift Packages -> Add Package Dependency...
 enter package URL : https://github.com/kerollesroshdi/KRTabBar.git , choose the latest release
 
 ## Usage
+#### set UITabBarController class to KRTabBarController
+<img src="images/controller.png" width="600"> 
+
+#### set UITabBarItem class to KRTabBarItem
+<img src="images/baritem1.png" width="600"> 
+
+#### set UITabBarItem Color and image
+<img src="images/baritem2.png" width="600">
