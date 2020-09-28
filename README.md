@@ -1,7 +1,7 @@
 # KRTabBar
 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/kerollesroshdi/KRTabBar) ![GitHub last commit](https://img.shields.io/github/last-commit/kerollesroshdi/KRTabBar) ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/kerollesroshdi/KRTabBar?sort=semver) ![](https://img.shields.io/badge/Platform-iOS-orange) <img src="https://img.shields.io/badge/minimum%20iOS%20version-9-red"> 
-![GitHub forks](https://img.shields.io/github/forks/kerollesroshdi/KRTabBar?style=social) ![GitHub stars](https://img.shields.io/github/stars/kerollesroshdi/KRTabBar?style=social) [![Twitter Follow](https://img.shields.io/twitter/follow/kerollesroshdi?style=social)](https://twitter.com/intent/follow?screen_name=kerollesroshdi)
+![GitHub forks](https://img.shields.io/github/forks/kerollesroshdi/KRTabBar?style=social) ![GitHub stars](https://img.shields.io/github/stars/kerollesroshdi/KRTabBar?style=social) [![Twitter Follow](https://img.shields.io/twitter/follow/kerollesroshdi?style=social)](https://twitter.com/intent/follow?screen_name=kerollesroshdi) [![Open Source Helpers](https://www.codetriage.com/kerollesroshdi/krtabbar/badges/users.svg)](https://www.codetriage.com/kerollesroshdi/krtabbar)
 
 This package provides a beautiful easy to use UITabBarController
 
