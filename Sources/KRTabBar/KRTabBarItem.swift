@@ -10,5 +10,8 @@ import UIKit
 
 class KRTabBarItem: UITabBarItem {
     @IBInspectable
-    var color: UIColor = UIColor.systemBlue
+    var backgroundColor: UIColor = UIColor.systemBlue
+
+	@IBInspectable
+	var iconColor: UIColor = .darkText
 }

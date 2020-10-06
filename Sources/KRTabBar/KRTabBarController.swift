@@ -18,8 +18,7 @@ class KRTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     private let customTabBarView: UIView = {
         let view = UIView(frame: .zero)
-        view.backgroundColor = .white
-        view.layer.cornerRadius = 20
+        view.backgroundColor = .systemBackground
         view.clipsToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -27,12 +26,9 @@ class KRTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     private let indexView: UIView = {
         let view = UIView(frame: .zero)
-        view.backgroundColor = .orange
-        view.layer.shadowColor = UIColor.orange.cgColor
         view.layer.shadowOpacity = 1
         view.layer.shadowOffset = CGSize(width: 2, height: 2)
         view.layer.shadowRadius = 10
-        view.layer.cornerRadius = 20
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -55,8 +51,7 @@ class KRTabBarController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBar.isHidden = true
-        addcoustmeTabBarView()
-        tabBar.tintColor = .black
+		addCustomTabBarView()
         createButtonsStack(viewControllers!)
         autolayout()
     }
@@ -75,7 +70,8 @@ class KRTabBarController: UITabBarController, UITabBarControllerDelegate {
         buttons.removeAll()
         buttonsColors.removeAll()
         
-        stackView.subviews.forEach {
+        stackView.arrangedSubviews.forEach {
+            stackView.removeArrangedSubview($0)
             $0.removeFromSuperview()
         }
         
@@ -84,13 +80,13 @@ class KRTabBarController: UITabBarController, UITabBarControllerDelegate {
                 assertionFailure("TabBarItems class must be KRTabBarItem")
 			    return
             }
-            buttonsColors.append(tabBarItem.color)
+            buttonsColors.append(tabBarItem.backgroundColor)
 			
             let button = UIButton()
             button.tag = index
             button.addTarget(self, action: #selector(didSelectIndex(sender:)), for: .touchUpInside)
             let image = viewController.tabBarItem.image?.withRenderingMode(.alwaysTemplate)
-            button.imageView?.tintColor = .black
+			button.imageView?.tintColor = tabBarItem.iconColor
             button.setImage(image, for: .normal)
             button.translatesAutoresizingMaskIntoConstraints = false
             stackView.addArrangedSubview(button)
@@ -117,7 +113,7 @@ class KRTabBarController: UITabBarController, UITabBarControllerDelegate {
         ])
     }
     
-    private func addcoustmeTabBarView() {
+    private func addCustomTabBarView() {
         customTabBarView.frame = tabBar.frame
         indexView.frame = tabBar.frame
         view.addSubview(customTabBarView)
@@ -126,9 +122,7 @@ class KRTabBarController: UITabBarController, UITabBarControllerDelegate {
         
         customTabBarView.addSubview(indexView)
         customTabBarView.addSubview(stackView)
-        
     }
-    
     
     @objc private func didSelectIndex(sender: UIButton) {
         let index = sender.tag
