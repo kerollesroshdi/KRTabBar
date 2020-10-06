@@ -80,14 +80,12 @@ class KRTabBarController: UITabBarController, UITabBarControllerDelegate {
         }
         
         for (index, viewController) in viewControllers.enumerated() {
-            if let tabBarItem = viewController.tabBarItem as? KRTabBarItem {
-                if let color = tabBarItem.color {
-                    buttonsColors.append(color)
-                }
-            } else {
-                fatalError("set tabBarItem Class as KRTabBarItem and set its color")
-                
+            guard let tabBarItem = viewController.tabBarItem as? KRTabBarItem else {
+                assertionFailure("TabBarItems class must be KRTabBarItem")
+			    return
             }
+            buttonsColors.append(tabBarItem.color)
+			
             let button = UIButton()
             button.tag = index
             button.addTarget(self, action: #selector(didSelectIndex(sender:)), for: .touchUpInside)
